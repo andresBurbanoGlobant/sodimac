@@ -1,8 +1,8 @@
-import { useEffect, useState, useRef } from 'react';
-import Input from'./molecules/Input'
-import ProductList from './molecules/ProductList';
-import ProductCard from './molecules/ProductCard';
-import NotFoundProduct from './molecules/NotFoundProduct';
+import { useEffect, useState } from 'react';
+import Input from'./components/Input'
+import ProductList from './components/ProductList';
+import ProductCard from './components/ProductCard';
+import NotFoundProduct from './components/NotFoundProduct';
 import './App.css';
 
 import productsList from './products.json'
