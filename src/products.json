@@ -1,28 +1,28 @@
 {
   "products": [
     {
-        "name":"producto 1",
+        "name":"Producto 1",
         "sku":"0123",
         "price":3450,
-        "image":"https://picsum.photos/id/1"
-    },
-    {
-        "name":"producto 2",
+        "image":"https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"
+      },
+      {
+        "name":"Producto 2",
         "sku":"1234",
         "price":12000,
-        "image":"https://picsum.photos/id/1"
-    },
-    {
-        "name":"producto 3",
+        "image":"https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"
+      },
+      {
+        "name":"Producto 3",
         "sku":"9873446",
         "price":5500,
-        "image":"https://picsum.photos/id/1"
-    },
-    {
-        "name":"producto 4",
+        "image":"https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"
+      },
+      {
+        "name":"Producto 4",
         "sku":"79634",
         "price":23500,
-        "image":"https://picsum.photos/id/1"
+        "image":"https://i.picsum.photos/id/1/5616/3744.jpg?hmac=kKHwwU8s46oNettHKwJ24qOlIAsWN9d2TtsXDoCWWsQ"
     }
   ]
 }

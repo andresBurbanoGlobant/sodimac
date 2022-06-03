@@ -1,3 +1,36 @@
 .card {
-  border: 1px solid green;
+  background-color: white;
+  padding: 16px;
+}
+
+.card_content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 16px;
+}
+
+.card_image > img {
+  width: 100%;
+}
+
+.card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product_info > h2, 
+.product_info > p {
+  margin: 0;
+}
+
+.product_info > p {
+  color: silver;
+}
+
+.product_price {
+  text-align: right;
+  color: red;
+  font-size: 20px;
+  font-weight: 500;
 }
