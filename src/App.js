@@ -14,9 +14,17 @@ function App() {
 
   const [products, setProducts] = useState(productsList.products)
   const [inputState, setInputState] = useState('')
+  const [InputAlert, setInputAlert] = useState(false)
 
   const handleInput = (event) => {
-    setInputState(event.target.value)
+    if (event.target.value.length <= MAX_DIGITS) {
+      setInputState(event.target.value)
+    }
+    if (event.target.value.length < MIN_DIGITS) {
+      setInputAlert(true)
+    } else {
+      setInputAlert(false)
+    }
   }
 
   const clearSearch = () => {
@@ -39,7 +47,11 @@ function App() {
   return (
     <div className="App">
       <h1>Prueba Sodimac</h1>
-      <Input onChange={handleInput} value={inputState} />
+      <Input 
+        onChange={handleInput}
+        value={inputState}
+        inputAlert={InputAlert}
+      />
       <ProductList>
         {products.length
           ? products.map(product => 

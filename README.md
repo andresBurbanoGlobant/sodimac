@@ -21,7 +21,8 @@
 - Para la búsqueda del producto se requiere consumir el siguiente servicio get ◦ ------
 
 ---
-
-[LINK TO DEPLOY](https://sodimac-ten.vercel.app/)
+<a href="https://sodimac-ten.vercel.app/" target="_blank">
+  LINK TO DEPLOY
+</a>
 
 ---

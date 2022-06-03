@@ -1,6 +1,9 @@
 .input_group {
   background-color: white;
   padding: 16px;
+}
+
+.input_warpper {
   display: flex;
 }
 
@@ -13,4 +16,10 @@
   box-shadow: 2px 2px 4px #000000;
   border: none;
   outline: none;
+}
+
+.input_alert {
+  padding-top: 10px;
+  color: red;
+  font-size: 12px;
 }
