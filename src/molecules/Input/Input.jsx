@@ -1,6 +1,6 @@
 import styles from './Input.module.css'
 
-const Input = ({onChange}) => {
+const Input = ({onChange, value}) => {
   return (
     <div className={styles.input_group}>
       <input 
@@ -8,6 +8,7 @@ const Input = ({onChange}) => {
         type="number" 
         placeholder="Digita el SKU"
         onChange={onChange}
+        value={value}
       />
     </div>
   )

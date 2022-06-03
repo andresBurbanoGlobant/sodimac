@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Input from'./molecules/Input'
 import ProductList from './molecules/ProductList';
 import ProductCard from './molecules/ProductCard';
@@ -19,6 +19,10 @@ function App() {
     setInputState(event.target.value)
   }
 
+  const clearSearch = () => {
+    setInputState('')
+  }
+
   useEffect(() => {
     if (  inputState 
           && inputState.length >= MIN_DIGITS 
@@ -35,13 +39,13 @@ function App() {
   return (
     <div className="App">
       <h1>Prueba Sodimac</h1>
-      <Input onChange={handleInput} />
+      <Input onChange={handleInput} value={inputState} />
       <ProductList>
         {products.length
           ? products.map(product => 
               <ProductCard key={product.sku} {...product}/>
             )
-          : <NotFoundProduct />
+          : <NotFoundProduct clearSearch={clearSearch}/>
         }
       </ProductList>
     </div>

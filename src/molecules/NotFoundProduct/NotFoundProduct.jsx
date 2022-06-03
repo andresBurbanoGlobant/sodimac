@@ -1,9 +1,17 @@
 import styles from './NotFoundProduct.module.css'
 
-const NotFoundProduct = () => {
+const NotFoundProduct = ({clearSearch}) => {
   return (
-    <div className={styles.test}>
-      <h1>Not Found Product</h1>
+    <div className={styles.card}>
+      <h2>No se encontró ningún producto</h2>
+      <div className={styles.button_wrapper}>
+        <button
+          onClick={clearSearch}
+          className={styles.button}
+        >
+          Nueva Busqueda
+        </button>
+      </div>
     </div>
   )
 }
