@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Input from'./molecules/Input'
 import ProductList from './molecules/ProductList';
 import ProductCard from './molecules/ProductCard';
@@ -9,19 +9,41 @@ import productsList from './products.json'
 
 function App() {
 
-  const [products, setProducts] = useState(productsList)
+  const MAX_DIGITS = 7
+  const MIN_DIGITS = 4
+
+  const [products, setProducts] = useState(productsList.products)
+  const [inputState, setInputState] = useState('')
+
+  const handleInput = (event) => {
+    setInputState(event.target.value)
+  }
+
+  useEffect(() => {
+    if (  inputState 
+          && inputState.length >= MIN_DIGITS 
+          && inputState.length <= MAX_DIGITS
+    ) {
+      setProducts(products.filter(
+        product => product.sku.includes(inputState))
+      )
+    } else {
+      setProducts(productsList.products)
+    }
+  }, [inputState])
 
   return (
     <div className="App">
       <h1>Prueba Sodimac</h1>
-      <Input />
+      <Input onChange={handleInput} />
       <ProductList>
-        {products.products.map(product => 
-            <ProductCard key={product.sku} {...product}/>
-          )
+        {products.length
+          ? products.map(product => 
+              <ProductCard key={product.sku} {...product}/>
+            )
+          : <NotFoundProduct />
         }
       </ProductList>
-      <NotFoundProduct />
     </div>
   );
 }
