@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+        "name":"producto 1",
+        "sku":"0123",
+        "price":3450,
+        "image":"https://picsum.photos/id/1"
+    },
+    {
+        "name":"producto 2",
+        "sku":"1234",
+        "price":12000,
+        "image":"https://picsum.photos/id/1"
+    },
+    {
+        "name":"producto 3",
+        "sku":"9873456",
+        "price":5500,
+        "image":"https://picsum.photos/id/1"
+    },
+    {
+        "name":"producto 4",
+        "sku":"79634",
+        "price":23500,
+        "image":"https://picsum.photos/id/1"
+    }
+  ]
+}
