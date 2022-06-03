@@ -20,7 +20,7 @@ function App() {
     if (event.target.value.length <= MAX_DIGITS) {
       setInputState(event.target.value)
     }
-    if (event.target.value.length < MIN_DIGITS) {
+    if (event.target.value.length && event.target.value.length < MIN_DIGITS) {
       setInputAlert(true)
     } else {
       setInputAlert(false)
